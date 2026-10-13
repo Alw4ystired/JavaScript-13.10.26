@@ -212,6 +212,19 @@ console.table(user2.nome, user2.eta)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const inventario = [
+   {nome: 'Quadro', prezzo: 100, disponibile: 'Disponibile'},
+   {nome: 'Cornice', prezzo: 50, disponibile: 'Disponibile'},
+   {nome: 'Tela', prezzo: 100, disponibile: 'Disponibile'}
+]
+const nonDisponibile = 'Non disponibile';
+ 
+ if (typeof myArray[i] === 'number') {
+      console.log(`${myArray[i]} è un numero`);
+   } else {
+      console.log(`${myArray[i]} non è un numero`);
+   };
+
 /* --EXTRA-- ESERCIZIO 13 — Reverse manuale
    Array [1, 2, 3, 4, 5].
    Nuovo array 'inverso', riempilo con un for (dall'ultimo al primo) usando push.
