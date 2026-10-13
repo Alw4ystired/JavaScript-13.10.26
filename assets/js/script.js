@@ -172,10 +172,12 @@ console.log(oggettiScuola);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const prodotti = ['Penna', 'Quaderno', 'Zaino'];
-const cercato = 'Zaino';
+const cercato = 'Zaino' //non ho capito perché dovevo specificare anche questa costante, forse ci vuole un if else, da riguardare.
 
-console.log(`Zaino è in carrello? : ${prodotti.includes('cercato')}`);
-console.log(`Zaino è in carrello? : ${typeof cercato}`);
+console.log(`Zaino è in carrello? : ${prodotti.includes('Zaino')}`);
+console.log(`Zaino è in carrello? : ${prodotti.indexOf('Zaino')}`);
+
+
 
 /* ESERCIZIO 11 — Lista utenti
    Array utenti di 3 oggetti { nome, eta }.
@@ -184,6 +186,18 @@ console.log(`Zaino è in carrello? : ${typeof cercato}`);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const listaUtenti = ['Nome', 'Soprannome', 'Età'];
+
+for (let i = 0; i < listaUtenti.length; i++) {
+   if (typeof myArray[i] === 'number') {
+      console.log(`${myArray[i]} è un numero`);
+   } else {
+      console.log(`${myArray[i]} non è un numero`);
+   }
+};
+
+
 
 /* ESERCIZIO 12 — Inventario disponibili
    Array prodotti di 4 oggetti { nome, prezzo, disponibile }.
