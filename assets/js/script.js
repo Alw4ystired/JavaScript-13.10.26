@@ -60,8 +60,22 @@ console.log(utente.indirizzo.cap);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-persona.nome = 'nome';
-console.log(persona['nome']);
+/*persona.nome = 'nome';
+console.log(persona['nome']);*/
+
+//sopra c'è l'esercizio in commento come l'ho fatto io, sotto è quello giusto, perché si richiede una variabile chiave = 'nome' che non avevo messo
+const persona = {
+   nome: 'Paoloino',
+   cognome: 'Paperino',
+   eta: 80,
+   citta: 'Paperopoli'
+
+};
+
+
+
+const chiave = 'nome'
+console.log(persona[chiave]);
 
 /* ESERCIZIO 5 — Numero più grande
    Tre numeri a, b, c.
@@ -69,6 +83,8 @@ console.log(persona['nome']);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+/* A circa 18 minuti della registrazione pomeridiana del giorno 13.10.26 Dario spiega comoe avrebbe fatto lui, simile a quello che ho fatto io, vai a controllare e metti anche quello nel codice, ha scritto meglio i console log */
+
 
 const a = 100;
 const b = 15;
@@ -92,6 +108,8 @@ if (a > b && a > c) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+/* Soluzione di Dario a minuto 25 circa della registrazione pomeridiana del 13.10.26 */
+
 let totale = 30;
 const spedizione = 9.90;
 
@@ -148,6 +166,9 @@ arrayVuoto.unshift(0);
 console.log(arrayVuoto);
 console.log(arrayVuoto.length);
 
+//con push si possono inserire più valori invece di metterli tutti singolarmente. L soluzione giusta sarebbe arrayVuoto.push(1, 2, 3, 4, 5); stesso discorso per il console log, che risulta cosi console.log(arrayVuoto, arrayVuoto.length);
+
+
 /* ESERCIZIO 9 — Carrello con splice
    Array ['Penna', 'Quaderno', 'Zaino', 'Astuccio'].
    Con splice: rimuovi 'Quaderno', poi inserisci 'Diario' al suo posto.
@@ -155,6 +176,7 @@ console.log(arrayVuoto.length);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+//Soluzione di Dario a minuto 52 circa della registrazione pomeridiana del 13.10.26
 
 const oggettiScuola = ['Penna', 'Quaderno', 'Zaino', 'Astuccio'];
 console.log(oggettiScuola);
@@ -172,10 +194,26 @@ console.log(oggettiScuola);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const prodotti = ['Penna', 'Quaderno', 'Zaino'];
-const cercato = 'Zaino' //non ho capito perché dovevo specificare anche questa costante, forse ci vuole un if else, da riguardare.
+let cercato = 'Zaino' //(correzione video a circa 1 ora)
 
+//Correzione di Dario e Manuel
+
+let zainoCerca = prodotti.indexOf(cercato);
+console.log(`Zaino è in carrello: ${zainoCerca}`)
+
+if (zainoCerca) {
+   let cercaZaino = prodotti.indexOf(cercato);
+   console.log(cercaZaino);
+} else {
+   console.log(`Non in carrello`);
+};
+
+
+/*
+Esercizio mio (sbagliato)
 console.log(`Zaino è in carrello? : ${prodotti.includes('Zaino')}`);
-console.log(`Zaino è in carrello? : ${prodotti.indexOf('Zaino')}`);
+console.log(`Zaino è in carrello? : ${prodotti.indexOf('Zaino')}`); 
+*/
 
 
 
@@ -190,14 +228,14 @@ console.log(`Zaino è in carrello? : ${prodotti.indexOf('Zaino')}`);
 //Ho cercato su google perché questo proprio non riuscivo a farlo, ristudiare for.
 
 const listaUtenti = [
-   {nome: 'Mario', eta: '25 anni' },
-   {nome: 'Giovanni', eta: '30 anni'},
-   {nome: 'Veronica', eta: '40 anni'}
+   { nome: 'Mario', eta: '25 anni' },
+   { nome: 'Giovanni', eta: '30 anni' },
+   { nome: 'Veronica', eta: '40 anni' }
 ];
 
 for (let i = 0; i < listaUtenti.length; i++) {
-const user2 = listaUtenti[i]
-console.table(user2.nome, user2.eta)
+   const user2 = listaUtenti[i]
+   console.table(user2.nome, user2.eta)
 };
 
 
@@ -213,17 +251,18 @@ console.table(user2.nome, user2.eta)
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const inventario = [
-   {nome: 'Quadro', prezzo: 100, disponibile: 'Disponibile'},
-   {nome: 'Cornice', prezzo: 50, disponibile: 'Disponibile'},
-   {nome: 'Tela', prezzo: 100, disponibile: 'Disponibile'}
-]
+   { nome: 'Quadro', prezzo: 100, disponibile: true },
+   { nome: 'Cornice', prezzo: 50, disponibile: true },
+   { nome: 'Tela', prezzo: 100, disponibile: true }
+];
+
 const nonDisponibile = 'Non disponibile';
- 
- if (typeof myArray[i] === 'number') {
-      console.log(`${myArray[i]} è un numero`);
-   } else {
-      console.log(`${myArray[i]} non è un numero`);
-   };
+
+if (typeof myArray[i] === 'number') {
+   console.log(`${myArray[i]} è un numero`);
+} else {
+   console.log(`${myArray[i]} non è un numero`);
+};
 
 /* --EXTRA-- ESERCIZIO 13 — Reverse manuale
    Array [1, 2, 3, 4, 5].
