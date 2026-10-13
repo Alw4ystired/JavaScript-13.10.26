@@ -159,7 +159,7 @@ console.log(arrayVuoto.length);
 const oggettiScuola = ['Penna', 'Quaderno', 'Zaino', 'Astuccio'];
 console.log(oggettiScuola);
 
-oggettiScuola.splice(1,1, 'Diario' );
+oggettiScuola.splice(1, 1, 'Diario');
 console.log(oggettiScuola);
 
 /* ESERCIZIO 10 — Cerca un articolo
@@ -187,14 +187,17 @@ console.log(`Zaino è in carrello? : ${prodotti.indexOf('Zaino')}`);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const listaUtenti = ['Nome', 'Soprannome', 'Età'];
+//Ho cercato su google perché questo proprio non riuscivo a farlo, ristudiare for.
+
+const listaUtenti = [
+   {nome: 'Mario', eta: '25 anni' },
+   {nome: 'Giovanni', eta: '30 anni'},
+   {nome: 'Veronica', eta: '40 anni'}
+];
 
 for (let i = 0; i < listaUtenti.length; i++) {
-   if (typeof myArray[i] === 'number') {
-      console.log(`${myArray[i]} è un numero`);
-   } else {
-      console.log(`${myArray[i]} non è un numero`);
-   }
+const user2 = listaUtenti[i]
+console.table(user2.nome, user2.eta)
 };
 
 
