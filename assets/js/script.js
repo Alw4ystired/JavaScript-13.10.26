@@ -14,10 +14,10 @@ REGOLE
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const persona = {
-nome: 'Mario',
-cognome: 'Rossi',
-eta: 25,
-citta: 'Roma',
+    nome: 'Mario',
+    cognome: 'Rossi',
+    eta: 25,
+    citta: 'Roma',
 };
 
 console.log(`${persona.nome} ${persona.cognome}, ${persona.eta} anni, vive a ${persona.citta}`);
@@ -41,6 +41,18 @@ console.log(persona);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const utente = {
+    nome: 'Paolo',
+    cognome: 'Verdi',
+    indirizzo: {
+        via: 'Via Caduti sul Lavoro 15',
+        citta: 'Roma',
+        cap: '00100',
+    },
+};
+
+console.log(utente.indirizzo.cap);
+
 /* ESERCIZIO 4 — Bracket dinamica
    Sull'oggetto 'persona', variabile chiave = 'nome'.
    Stampa il valore con bracket notation usando la variabile chiave.
@@ -48,12 +60,29 @@ console.log(persona);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+persona.nome = 'nome';
+console.log(persona['nome']);
+
 /* ESERCIZIO 5 — Numero più grande
    Tre numeri a, b, c.
    Con if/else if, stampa il più grande. Se pareggio al massimo, stampa 'Pareggio'.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const a = 100;
+const b = 15;
+const c = 3;
+
+if (a > b && a > c) {
+    console.log(a);
+} else if (b > a && b > c) {
+    console.log(b);
+} else if (c > a && c > b) {
+    console.log(c);
+} else {
+    console.log('Pareggio');
+};
 
 /* ESERCIZIO 6 — E-commerce: spedizione
    Variabile 'totale'.
@@ -63,6 +92,23 @@ console.log(persona);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let totale = 30;
+const spedizione = 9.90;
+
+if (totale >= 50) {
+    console.log(`Totale carrello: ${totale} - Spedizione: Gratuita - Totale finale: ${totale}`)
+
+} else {
+   console.log(`Totale carrello: ${totale} - Spedizione: ${spedizione} - Totale finale: ${totale + spedizione}`)
+}
+
+
+const mySpedizione =
+totale >=50
+	? `Totale carrello: ${totale} - Spedizione: Gratuita - Totale finale: ${totale}` 
+	: `Totale carrello: ${totale} - Spedizione: ${spedizione} - Totale finale: ${totale + spedizione}` ;
+
+   console.log(mySpedizione);
 
 /* ESERCIZIO 7 — typeof check
    Crea un array con 3 valori diversi (es. [42, 'ciao', true]).
@@ -70,6 +116,8 @@ console.log(persona);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const myArray = [42, 'ciao', true];
+
 /* ESERCIZIO 8 — Array dei numeri
    Array vuoto. Aggiungi 1..5 con push. Aggiungi 0 all'inizio con unshift.
    Stampa array e length.
