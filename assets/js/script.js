@@ -14,10 +14,10 @@ REGOLE
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const persona = {
-    nome: 'Mario',
-    cognome: 'Rossi',
-    eta: 25,
-    citta: 'Roma',
+   nome: 'Mario',
+   cognome: 'Rossi',
+   eta: 25,
+   citta: 'Roma',
 };
 
 console.log(`${persona.nome} ${persona.cognome}, ${persona.eta} anni, vive a ${persona.citta}`);
@@ -42,13 +42,13 @@ console.log(persona);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const utente = {
-    nome: 'Paolo',
-    cognome: 'Verdi',
-    indirizzo: {
-        via: 'Via Caduti sul Lavoro 15',
-        citta: 'Roma',
-        cap: '00100',
-    },
+   nome: 'Paolo',
+   cognome: 'Verdi',
+   indirizzo: {
+      via: 'Via Caduti sul Lavoro 15',
+      citta: 'Roma',
+      cap: '00100',
+   },
 };
 
 console.log(utente.indirizzo.cap);
@@ -75,13 +75,13 @@ const b = 15;
 const c = 3;
 
 if (a > b && a > c) {
-    console.log(a);
+   console.log(a);
 } else if (b > a && b > c) {
-    console.log(b);
+   console.log(b);
 } else if (c > a && c > b) {
-    console.log(c);
+   console.log(c);
 } else {
-    console.log('Pareggio');
+   console.log('Pareggio');
 };
 
 /* ESERCIZIO 6 — E-commerce: spedizione
@@ -96,7 +96,7 @@ let totale = 30;
 const spedizione = 9.90;
 
 if (totale >= 50) {
-    console.log(`Totale carrello: ${totale} - Spedizione: Gratuita - Totale finale: ${totale}`)
+   console.log(`Totale carrello: ${totale} - Spedizione: Gratuita - Totale finale: ${totale}`)
 
 } else {
    console.log(`Totale carrello: ${totale} - Spedizione: ${spedizione} - Totale finale: ${totale + spedizione}`)
@@ -104,11 +104,11 @@ if (totale >= 50) {
 
 
 const mySpedizione =
-totale >=50
-	? `Totale carrello: ${totale} - Spedizione: Gratuita - Totale finale: ${totale}` 
-	: `Totale carrello: ${totale} - Spedizione: ${spedizione} - Totale finale: ${totale + spedizione}` ;
+   totale >= 50
+      ? `Totale carrello: ${totale} - Spedizione: Gratuita - Totale finale: ${totale}`
+      : `Totale carrello: ${totale} - Spedizione: ${spedizione} - Totale finale: ${totale + spedizione}`;
 
-   console.log(mySpedizione);
+console.log(mySpedizione);
 
 /* ESERCIZIO 7 — typeof check
    Crea un array con 3 valori diversi (es. [42, 'ciao', true]).
@@ -118,12 +118,35 @@ totale >=50
 /* SCRIVI QUI LA TUA RISPOSTA */
 const myArray = [42, 'ciao', true];
 
+
+for (let i = 0; i < myArray.length; i++) {
+   if (typeof myArray[i] === 'number') {
+      console.log(`${myArray[i]} è un numero`);
+   } else {
+      console.log(`${myArray[i]} non è un numero`);
+   }
+};
+
+
 /* ESERCIZIO 8 — Array dei numeri
    Array vuoto. Aggiungi 1..5 con push. Aggiungi 0 all'inizio con unshift.
    Stampa array e length.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const arrayVuoto = [];
+
+arrayVuoto.push(1);
+arrayVuoto.push(2);
+arrayVuoto.push(3);
+arrayVuoto.push(4);
+arrayVuoto.push(5);
+
+arrayVuoto.unshift(0);
+
+console.log(arrayVuoto);
+console.log(arrayVuoto.length);
 
 /* ESERCIZIO 9 — Carrello con splice
    Array ['Penna', 'Quaderno', 'Zaino', 'Astuccio'].
@@ -133,6 +156,12 @@ const myArray = [42, 'ciao', true];
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const oggettiScuola = ['Penna', 'Quaderno', 'Zaino', 'Astuccio'];
+console.log(oggettiScuola);
+
+oggettiScuola.splice(1,1, 'Diario' );
+console.log(oggettiScuola);
+
 /* ESERCIZIO 10 — Cerca un articolo
    Array prodotti = ['Penna', 'Quaderno', 'Zaino'].
    cercato = 'Zaino'.
@@ -141,6 +170,12 @@ const myArray = [42, 'ciao', true];
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const prodotti = ['Penna', 'Quaderno', 'Zaino'];
+const cercato = 'Zaino';
+
+console.log(`Zaino è in carrello? : ${prodotti.includes('cercato')}`);
+console.log(`Zaino è in carrello? : ${typeof cercato}`);
 
 /* ESERCIZIO 11 — Lista utenti
    Array utenti di 3 oggetti { nome, eta }.
